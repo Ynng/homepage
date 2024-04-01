@@ -19,6 +19,14 @@
         - abbr: HP
           href: https://gethomepage.dev/latest/configs/
           icon: https://gethomepage.dev/latest/assets/light_squircle@2x.png
+    - SSH:
+        - abbr: SH
+          href: ssh://ynng-dev-pc
+          icon: https://fedoraproject.org/favicon.ico
+    - Remote Desktop:
+        - abbr: RD
+          href: "ms-rd:"
+          icon: https://ynng.ca/rdp.png
 
 - Utilities:
     - Inside Tesla:
