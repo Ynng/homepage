@@ -48,8 +48,18 @@
             key: REPLACEME
     - Caddy:
         icon: https://caddyserver.com/resources/images/favicon.png
-        siteMonitor: https://pc.ynng.ca
         description: Reverse proxy server
+        server: ynng-dev-pc
+        container: caddy-caddy-1
         widget:
             type: caddy
             url: http://localhost:2019
+    - Speedtest:
+        href: http://ynng-dev-pc:8080
+        icon: https://docs.speedtest-tracker.dev/~gitbook/icon?size=small&theme=light
+        description: Speedtest tracker
+        server: ynng-dev-pc
+        container: speedtest-tracker
+        widget:
+            type: speedtest
+            url: http://localhost:8080
