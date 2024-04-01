@@ -1,0 +1,27 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/service-widgets
+
+- logo:
+    icon: https://avatars.githubusercontent.com/u/44907675?
+
+- search:
+    provider: google
+    showSearchSuggestions: true
+    target: _blank
+
+- resources:
+    cpu: true
+    memory: true
+    cputemp: true
+    uptime: true
+    units: metric # only used by cpu temp
+
+- resources:
+    cpu: false
+    memory: false
+    expanded: true
+    disk:
+      - /
+      - /mnt/gentle-rain
+

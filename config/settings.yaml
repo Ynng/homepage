@@ -1,0 +1,22 @@
+title: My Homepage
+favicon: https://ynng.ca/favicon.ico
+background:
+  image: https://ynng.ca/link.jpg
+  # blur: sm  # sm, "", md, xl... see https://tailwindcss.com/docs/backdrop-blur
+  # saturate: 100 # 0, 50, 100... see https://tailwindcss.com/docs/backdrop-saturate
+  # brightness: 100 # 0, 50, 75... see https://tailwindcss.com/docs/backdrop-brightness
+  opacity: 75 # 0-100
+cardBlur: xl
+headerStyle: clean
+layout:
+  Public:
+    style: row
+    columns: 3
+    useEqualHeights: true
+  Admin:
+    style: row
+    columns: 3
+    useEqualHeights: true
+statusStyle: "dot"
+hideVersion: true
+
