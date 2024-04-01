@@ -13,17 +13,30 @@
             type: immich
             url: http://localhost:2283
             key: REPLACEME
+    - Jellyfin:
+        href: https://jellyfin.ynng.ca
+        icon: https://jellyfin.org/images/favicon.ico
+        description: Watch totally legal movies, shows and anime
+        server: ynng-dev-pc
+        container: jellyfin
+        widget:
+            type: jellyfin
+            url: http://localhost:8096
+            key: REPLACEME
+            enableBlocks: true # optional, defaults to false
+            enableNowPlaying: true # optional, defaults to true
     - Plex:
         href: https://app.plex.tv/
         icon: https://plex.tv/favicon.ico
         siteMonitor: http://localhost:32400
-        description: Media server for totally anime and shows
+        description: Worse proprietary jellyfin
         widget:
             type: plex
             url: http://localhost:32400
             key: REPLACEME
 - Admin:
     - Portainer:
+        href: http://ynng-dev-pc:9000
         server: ynng-dev-pc
         icon: https://portainer.io/favicon.ico
         description: Docker container management
