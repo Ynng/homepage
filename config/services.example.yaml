@@ -1,0 +1,42 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/services
+
+- Public:
+    - Immich:
+        href: https://immich.ynng.ca
+        icon: https://immich.ynng.ca/favicon.ico
+        description: Google Photo alternative
+        server: ynng-dev-pc
+        container: immich_server
+        widget:
+            type: immich
+            url: http://localhost:2283
+            key: REPLACEME
+    - Plex:
+        href: https://app.plex.tv/
+        icon: https://plex.tv/favicon.ico
+        siteMonitor: http://localhost:32400
+        description: Media server for totally anime and shows
+        widget:
+            type: plex
+            url: http://localhost:32400
+            key: REPLACEME
+- Admin:
+    - Portainer:
+        server: ynng-dev-pc
+        icon: https://portainer.io/favicon.ico
+        description: Docker container management
+        container: portainer
+        widget:
+            type: portainer
+            env: 1
+            url: http://localhost:9000
+            key: REPLACEME
+    - Caddy:
+        icon: https://caddyserver.com/resources/images/favicon.png
+        siteMonitor: https://pc.ynng.ca
+        description: Reverse proxy server
+        widget:
+            type: caddy
+            url: http://localhost:2019
