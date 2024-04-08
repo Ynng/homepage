@@ -13,8 +13,6 @@
             type: immich
             url: http://localhost:12374
             key: <key>
-
-- Media:
     - Jellyfin:
         href: https://jellyfin.ynng.ca
         icon: https://jellyfin.org/images/favicon.ico
@@ -27,6 +25,17 @@
             key: <key>
             enableBlocks: true # optional, defaults to false
             enableNowPlaying: true # optional, defaults to true
+    - Jellyseerr:
+        href: https://jellyseerr.ynng.ca
+        icon: https://jellyseerr.ynng.ca/favicon.ico
+        description: Download movies and shows
+        server: ynng-dev-pc
+        container: jellyseerr
+        widget:
+            type: jellyseerr
+            url: http://localhost:5055
+            key: <key>
+- Media:
     # - Plex:
     #     href: https://app.plex.tv/
     #     icon: https://plex.tv/favicon.ico
@@ -36,6 +45,17 @@
     #         type: plex
     #         url: http://localhost:32400
     #         key: hTcUzHah-zCwe7WVpUzA
+    - Sonarr:
+        href: http://ynng-dev-pc:8989
+        icon: https://sonarr.tv/img/logo.png
+        description: TV show and anime management
+        server: ynng-dev-pc
+        container: sonarr
+        widget:
+            type: sonarr
+            url: http://localhost:8989
+            key: <key>
+            enableQueue: true
     - Bazarr:
         href: http://ynng-dev-pc:6767
         icon: https://www.bazarr.media/assets/img/logo.png
@@ -57,17 +77,6 @@
             url: http://localhost:51436
             username: <key>
             password: <key>
-    - Sonarr:
-        href: http://ynng-dev-pc:8989
-        icon: https://sonarr.tv/img/logo.png
-        description: TV show and anime management
-        server: ynng-dev-pc
-        container: sonarr
-        widget:
-            type: sonarr
-            url: http://localhost:8989
-            key: <key>
-            enableQueue: true
     - Radarr:
         href: http://ynng-dev-pc:7878
         icon: https://radarr.video/img/logo.png
