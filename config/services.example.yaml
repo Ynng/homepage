@@ -11,7 +11,7 @@
         container: immich_server
         widget:
             type: immich
-            url: http://localhost:2283
+            url: http://localhost:12374
             key: REPLACEME
     - Jellyfin:
         href: https://jellyfin.ynng.ca
@@ -55,11 +55,11 @@
             type: caddy
             url: http://localhost:2019
     - Speedtest:
-        href: http://ynng-dev-pc:8080
+        href: http://ynng-dev-pc:61205
         icon: https://docs.speedtest-tracker.dev/~gitbook/icon?size=small&theme=light
         description: Speedtest tracker
         server: ynng-dev-pc
         container: speedtest-tracker
         widget:
             type: speedtest
-            url: http://localhost:8080
+            url: http://localhost:61205
