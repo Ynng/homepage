@@ -11,20 +11,10 @@ headerStyle: clean
 layout:
   Apps:
     style: row
-    columns: 3
-    useEqualHeights: true
+    columns: 4
   Media:
-    style: row
-    columns: 3
-    useEqualHeights: true
   Admin:
-    style: row
-    columns: 3
-    useEqualHeights: true
-  Infalstructural:
-    style: row
-    columns: 3
-    useEqualHeights: true
+  Infrastructural:
 statusStyle: "dot"
 hideVersion: true
 
