@@ -2,7 +2,7 @@
 # For configuration options and examples, please see:
 # https://gethomepage.dev/latest/configs/services
 
-- Public:
+- Apps:
     - Immich:
         href: https://immich.ynng.ca
         icon: https://immich.ynng.ca/favicon.ico
@@ -12,7 +12,9 @@
         widget:
             type: immich
             url: http://localhost:12374
-            key: REPLACEME
+            key: <key>
+
+- Media:
     - Jellyfin:
         href: https://jellyfin.ynng.ca
         icon: https://jellyfin.org/images/favicon.ico
@@ -22,18 +24,72 @@
         widget:
             type: jellyfin
             url: http://localhost:8096
-            key: REPLACEME
+            key: <key>
             enableBlocks: true # optional, defaults to false
             enableNowPlaying: true # optional, defaults to true
-    - Plex:
-        href: https://app.plex.tv/
-        icon: https://plex.tv/favicon.ico
-        siteMonitor: http://localhost:32400
-        description: Worse proprietary jellyfin
+    # - Plex:
+    #     href: https://app.plex.tv/
+    #     icon: https://plex.tv/favicon.ico
+    #     siteMonitor: http://localhost:32400
+    #     description: Worse proprietary jellyfin
+    #     widget:
+    #         type: plex
+    #         url: http://localhost:32400
+    #         key: hTcUzHah-zCwe7WVpUzA
+    - Bazarr:
+        href: http://ynng-dev-pc:6767
+        icon: https://www.bazarr.media/assets/img/logo.png
+        description: Subtitle management
+        server: ynng-dev-pc
+        container: bazarr
         widget:
-            type: plex
-            url: http://localhost:32400
-            key: REPLACEME
+            type: bazarr
+            url: http://localhost:6767
+            key: <key>
+    - qBittorrent:
+        href: http://ynng-dev-pc:51436
+        icon: https://www.qbittorrent.org/favicon.ico
+        description: Torrent client
+        server: ynng-dev-pc
+        container: qbittorrent
+        widget:
+            type: qbittorrent
+            url: http://localhost:51436
+            username: <key>
+            password: <key>
+    - Sonarr:
+        href: http://ynng-dev-pc:8989
+        icon: https://sonarr.tv/img/logo.png
+        description: TV show and anime management
+        server: ynng-dev-pc
+        container: sonarr
+        widget:
+            type: sonarr
+            url: http://localhost:8989
+            key: <key>
+            enableQueue: true
+    - Radarr:
+        href: http://ynng-dev-pc:7878
+        icon: https://radarr.video/img/logo.png
+        description: Movie management
+        server: ynng-dev-pc
+        container: radarr
+        widget:
+            type: radarr
+            url: http://localhost:7878
+            key: <key>
+            enableQueue: true
+    - Jackett:
+        href: http://ynng-dev-pc:9117
+        icon: https://avatars.githubusercontent.com/u/15383019?s=48&v=4
+        description: Torrent indexer
+        server: ynng-dev-pc
+        container: jackett
+        widget:
+            type: jackett
+            url: http://localhost:9117
+            key: <key>
+
 - Admin:
     - Portainer:
         href: http://ynng-dev-pc:9000
@@ -45,7 +101,9 @@
             type: portainer
             env: 1
             url: http://localhost:9000
-            key: REPLACEME
+            key: <key>
+
+- Infalstructural:
     - Caddy:
         icon: https://caddyserver.com/resources/images/favicon.png
         description: Reverse proxy server
@@ -63,3 +121,9 @@
         widget:
             type: speedtest
             url: http://localhost:61205
+    - FlareSolverr:
+        href: http://ynng-dev-pc:8191
+        icon: https://avatars.githubusercontent.com/u/75936191?s=48&v=4
+        description: Cloudflare bypass
+        server: ynng-dev-pc
+        container: flaresolverr
