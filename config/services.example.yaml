@@ -136,3 +136,9 @@
         description: Cloudflare bypass
         server: ynng-dev-pc
         container: flaresolverr
+    - DDNS-Updater:
+        href: http://ynng-dev-pc:7684/
+        icon: https://raw.githubusercontent.com/qdm12/ddns-updater/master/readme/ddnsgopher.svg
+        description: Dynamic DNS updater
+        server: ynng-dev-pc
+        container: ddns-updater
