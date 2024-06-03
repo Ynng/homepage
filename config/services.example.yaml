@@ -142,3 +142,9 @@
         description: Dynamic DNS updater
         server: ynng-dev-pc
         container: ddns-updater
+    - log:
+        href: https://log.ynng.ca
+        icon: https://goaccess.io/assets/ico/favicon.ico
+        description: Web server log
+        server: ynng-dev-pc
+        container: goaccess-goaccess-1
