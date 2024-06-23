@@ -117,7 +117,7 @@
         icon: https://caddyserver.com/resources/images/favicon.png
         description: Reverse proxy server
         server: ynng-dev-pc
-        container: caddy-caddy-1
+        container: caddy
         widget:
             type: caddy
             url: http://localhost:2019
@@ -147,4 +147,4 @@
         icon: https://goaccess.io/assets/ico/favicon.ico
         description: Web server log
         server: ynng-dev-pc
-        container: goaccess-goaccess-1
+        container: goaccess
