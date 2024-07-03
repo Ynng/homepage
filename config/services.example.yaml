@@ -3,6 +3,12 @@
 # https://gethomepage.dev/latest/configs/services
 
 - Apps:
+    - Librechat:
+        href: https://librechat.ynng.ca
+        icon: https://librechat.ynng.ca/assets/favicon-32x32.png
+        description: Self-hosted ChatGPT
+        server: ynng-dev-pc
+        container: LibreChat-API
     - Immich:
         href: https://immich.ynng.ca
         icon: https://immich.ynng.ca/favicon.ico
@@ -36,15 +42,6 @@
             url: http://localhost:5055
             key: <key>
 - Media:
-    # - Plex:
-    #     href: https://app.plex.tv/
-    #     icon: https://plex.tv/favicon.ico
-    #     siteMonitor: http://localhost:32400
-    #     description: Worse proprietary jellyfin
-    #     widget:
-    #         type: plex
-    #         url: http://localhost:32400
-    #         key: hTcUzHah-zCwe7WVpUzA
     - Sonarr:
         href: http://ynng-dev-pc:8989
         icon: https://sonarr.tv/img/logo.png
@@ -54,6 +51,17 @@
         widget:
             type: sonarr
             url: http://localhost:8989
+            key: <key>
+            enableQueue: true
+    - Radarr:
+        href: http://ynng-dev-pc:7878
+        icon: https://radarr.video/img/logo.png
+        description: Movie management
+        server: ynng-dev-pc
+        container: radarr
+        widget:
+            type: radarr
+            url: http://localhost:7878
             key: <key>
             enableQueue: true
     - Bazarr:
@@ -66,40 +74,8 @@
             type: bazarr
             url: http://localhost:6767
             key: <key>
-    - qBittorrent:
-        href: http://ynng-dev-pc:51436
-        icon: https://www.qbittorrent.org/favicon.ico
-        description: Torrent client
-        server: ynng-dev-pc
-        container: qbittorrent
-        widget:
-            type: qbittorrent
-            url: http://localhost:51436
-            username: <key>
-            password: <key>
-    - Radarr:
-        href: http://ynng-dev-pc:7878
-        icon: https://radarr.video/img/logo.png
-        description: Movie management
-        server: ynng-dev-pc
-        container: radarr
-        widget:
-            type: radarr
-            url: http://localhost:7878
-            key: <key>
-            enableQueue: true
-    - Jackett:
-        href: http://ynng-dev-pc:9117
-        icon: https://avatars.githubusercontent.com/u/15383019?s=48&v=4
-        description: Torrent indexer
-        server: ynng-dev-pc
-        container: jackett
-        widget:
-            type: jackett
-            url: http://localhost:9117
-            password: <key>
 
-- Admin:
+- Infrastructural:
     - Portainer:
         href: http://ynng-dev-pc:9000
         server: ynng-dev-pc
@@ -111,8 +87,18 @@
             env: 1
             url: http://localhost:9000
             key: <key>
-
-- Infalstructural:
+    - Duplicati:
+        href: http://ynng-dev-pc:8200/ngax/index.html
+        icon: https://avatars.githubusercontent.com/u/8270231?s=48&v=4
+        description: Backup management
+        server: ynng-dev-pc
+        container: duplicati
+    - log:
+        href: https://log.ynng.ca
+        icon: https://goaccess.io/assets/ico/favicon.ico
+        description: Web server log
+        server: ynng-dev-pc
+        container: goaccess
     - Caddy:
         icon: https://caddyserver.com/resources/images/favicon.png
         description: Reverse proxy server
@@ -121,6 +107,36 @@
         widget:
             type: caddy
             url: http://localhost:2019
+    - DDNS-Updater:
+        href: http://ynng-dev-pc:7684/
+        icon: https://raw.githubusercontent.com/qdm12/ddns-updater/master/readme/ddnsgopher.svg
+        description: Dynamic DNS updater
+        server: ynng-dev-pc
+        container: ddns-updater
+
+
+- Other:
+    - Jackett:
+        href: http://ynng-dev-pc:9117
+        icon: https://avatars.githubusercontent.com/u/15383019?s=48&v=4
+        description: Torrent indexer
+        server: ynng-dev-pc
+        container: jackett
+        widget:
+            type: jackett
+            url: http://localhost:9117
+            password: <key>
+    - qBittorrent:
+        href: http://ynng-dev-pc:51436
+        icon: https://www.qbittorrent.org/favicon.ico
+        description: Torrent client
+        server: ynng-dev-pc
+        container: qbittorrent
+        widget:
+            type: qbittorrent
+            url: http://localhost:51436
+            username: <username>
+            password: <key>
     - Speedtest:
         href: http://ynng-dev-pc:61205
         icon: https://docs.speedtest-tracker.dev/~gitbook/icon?size=small&theme=light
@@ -136,15 +152,3 @@
         description: Cloudflare bypass
         server: ynng-dev-pc
         container: flaresolverr
-    - DDNS-Updater:
-        href: http://ynng-dev-pc:7684/
-        icon: https://raw.githubusercontent.com/qdm12/ddns-updater/master/readme/ddnsgopher.svg
-        description: Dynamic DNS updater
-        server: ynng-dev-pc
-        container: ddns-updater
-    - log:
-        href: https://log.ynng.ca
-        icon: https://goaccess.io/assets/ico/favicon.ico
-        description: Web server log
-        server: ynng-dev-pc
-        container: goaccess

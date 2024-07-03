@@ -7,14 +7,24 @@ background:
   # brightness: 100 # 0, 50, 75... see https://tailwindcss.com/docs/backdrop-brightness
   opacity: 30 # 0-100
 cardBlur: xl
-headerStyle: clean
+headerStyle: boxedWidgets
 layout:
   Apps:
     style: row
     columns: 4
+    useEqualHeights: true
   Media:
-  Admin:
+    style: row
+    columns: 4
+    useEqualHeights: true
   Infrastructural:
+    style: row
+    columns: 4
+    useEqualHeights: true
+  Other:
+    style: row
+    columns: 4
+    useEqualHeights: true
 statusStyle: "dot"
 hideVersion: true
 
