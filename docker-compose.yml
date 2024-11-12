@@ -8,4 +8,5 @@ services:
       - /home/wenqi/Documents/homepage/config:/app/config # Make sure your local config directory exists
       - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations
       - /mnt/gentle-rain:/mnt/gentle-rain:ro
-    network_mode: "host"
+    ports:
+      - 45521:3000
